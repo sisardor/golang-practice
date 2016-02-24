@@ -19,6 +19,18 @@ func fib() func() int {
 	}
 }
 
+func beyondHello() {
+	var x int
+	x = 3
+	y := 4
+	sum, prod := learnMultiple(x ,y)
+	fmt.Println("sum: ", sum," \tprod: ", prod)
+}
+
+func learnMultiple(x, y int) (sum, prod int) {
+	return x + y, x * y
+}
+
 func main() {
 	fmt.Println("Hello World!")
 
@@ -31,5 +43,8 @@ func main() {
 	s := fmt.Sprintf("`%s`", time.Now())
 	fmt.Println(s)
 
+	fmt.Println("\nbeyondHello()")
+	beyondHello()
 }
+
 
